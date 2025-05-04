@@ -8,6 +8,6 @@ public class SecureGateApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(SecureGateApplication.class, args);
+        System.out.println("\uD83D\uDE80 SecureGate backend iniciado com sucesso!");
     }
-
 }
