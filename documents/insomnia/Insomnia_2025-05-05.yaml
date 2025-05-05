@@ -1,0 +1,108 @@
+type: collection.insomnia.rest/5.0
+name: SecureGate
+meta:
+  id: wrk_d86b6de7a53e4c5a9a92961680b1f3c3
+  created: 1746486536225
+  modified: 1746486536225
+collection:
+  - url: http://localhost:8080/api/validate
+    name: Validação Facial
+    meta:
+      id: req_ab17d90f9a55478bb51ed62892fc4fc7
+      created: 1746486536226
+      modified: 1746486536226
+      isPrivate: false
+      sortKey: -1746486536226
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+            "type": "facial",
+            "imagePath": "face_001.jpg",
+            "metadata": {
+                "device": "iPhone 14 Pro",
+                "ip": "192.168.0.101",
+                "timestamp": "2025-05-05T19:45:00"
+            }
+        }
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/validate
+    name: Validação Documento
+    meta:
+      id: req_113fdce76e6b4e9e8440179e32537526
+      created: 1746486536227
+      modified: 1746486536227
+      isPrivate: false
+      sortKey: -1746486536227
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+            "type": "document",
+            "frontImagePath": "doc_front.jpg",
+            "backImagePath": "doc_back.jpg",
+            "metadata": {
+                "device": "Notebook Dell",
+                "ip": "192.168.0.103",
+                "timestamp": "2025-05-05T19:47:00"
+            }
+        }
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/validate
+    name: Validação Digital
+    meta:
+      id: req_b4eda2f86497476489d071e5d819ff99
+      created: 1746486536227
+      modified: 1746488579979
+      isPrivate: false
+      sortKey: -1746486536227
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "type": "fingerprint",
+          "imagePath": "finger_001.jpg",
+          "metadata": {
+            "device": "Samsung S23",
+            "ip": "192.168.0.102",
+            "timestamp": "2025-05-05T19:46:00"
+          }
+        }
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_0d7825322eca1bc18a15ed72b6bc35f43902d817
+    created: 1746486536228
+    modified: 1746486536228
+environments:
+  name: Base Environment
+  meta:
+    id: env_0d7825322eca1bc18a15ed72b6bc35f43902d817
+    created: 1746486536228
+    modified: 1746486536228
+    isPrivate: false

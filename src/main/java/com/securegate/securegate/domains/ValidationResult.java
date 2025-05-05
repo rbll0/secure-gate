@@ -2,17 +2,18 @@ package com.securegate.securegate.domains;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Data
 @Entity
-@Table(name = "validation_result")
+@Document(collection = "validation_result")
 public class ValidationResult {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID id;
+    private String id;
 
     private boolean isValid;
     private String reason;
